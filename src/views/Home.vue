@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>ToDo list</h1>
+    <p>Esta app de prueba es una clásica ToDo list</p>
+    <button v-on:click="gotoList">Tocá para comenzar</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
+
+// const router = this.$router;
+console.log(this);
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  name: "home",
+  methods: {
+    gotoList() {
+      this.$router.push({ name: "list" });
+    }
   }
-}
+};
 </script>
